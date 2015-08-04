@@ -1,0 +1,41 @@
+[{
+  "id":1,
+  "name":"Chinese",
+  "popularity":7,
+  "url":""
+},{
+  "id":2,
+  "name":"Japanese",
+  "popularity":2,
+  "url":""
+},{
+  "id":1,
+  "name":"Mongolian",
+  "popularity":2,
+  "url":""
+},
+  {
+    "id":1,
+    "name":"Italian",
+    "popularity":6,
+    "url":""
+  },{
+  "id":1,
+  "name":"Indian",
+  "popularity":10,
+  "url":""
+},{
+  "id":1,
+  "name":"Continental",
+  "popularity":8
+},{
+  "id":1,
+  "name":"Thai",
+  "popularity":5,
+  "url":""
+},{
+  "id":1,
+  "name":"Mughlai",
+  "popularity":9,
+  "url":""
+}];
