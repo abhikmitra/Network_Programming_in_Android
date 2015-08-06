@@ -8,8 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.facebook.stetho.okhttp.StethoInterceptor;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.squareup.okhttp.CacheControl;
 import com.squareup.okhttp.Call;
 import com.squareup.okhttp.Callback;
 import com.squareup.okhttp.OkHttpClient;
@@ -39,6 +41,7 @@ public class MainActivityFragment extends Fragment {
         Uri.Builder builder = new Uri.Builder();
         timeKeeper.start();
         String urlStr = "raw.githubusercontent.com";
+        client.networkInterceptors().add(new StethoInterceptor());
         builder
                 .scheme("https")
                 .authority(urlStr)
@@ -47,6 +50,7 @@ public class MainActivityFragment extends Fragment {
                 .appendPath("master")
                 .appendPath("cuisine.json");
         Request request = new Request.Builder()
+                .cacheControl(new CacheControl.Builder().build())
                 .url(builder.build().toString())
                 .build();
         int times = count;

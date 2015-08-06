@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivityFragment">
+
+    <Button android:text="Change An Image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:id="@+id/imageChangeBtn"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/my_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        fresco:placeholderImage="@mipmap/hexloader2"
+        />
+</LinearLayout>
